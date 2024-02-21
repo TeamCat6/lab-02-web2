@@ -67,7 +67,7 @@ public class ResultServlet extends HttpServlet {
 
     private void setCookie(Parameter parameter, double value, HttpServletResponse response) {
         Cookie cookie = new Cookie(parameter.name(), Double.toString(value));
-        cookie.setMaxAge(2 * 24 * 60);
+        cookie.setMaxAge(2 * 24 * 60 * 60);
         response.addCookie(cookie);
     }
 
